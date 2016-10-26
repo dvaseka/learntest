@@ -4,11 +4,17 @@
   <meta charset="utf-8">
   <style type = "text/css">
     
-      td, tr {
-              border: 2px solid;
-              padding: 0;
-              margin: 0;
+      td {
+              
+              padding: 3px 5px;
+              border: 1px solid;
+              
+      },
+      
+      table {
+          border-collapse: collapse;
       }
+      
   </style>
 </head>
 
@@ -53,7 +59,15 @@
   </table>
   
   <script>
-    
+    var table = document.body.firstElementChild;
+      
+    for (var i = 0; i < table.rows.length; i++) {
+        for (var k = 0; k < table.rows[i].cells.length; k++) {
+            if (i == k) {
+                table.rows[i].cells[k].style.backgroundColor = "red";
+            }
+        }
+    } 
     </script>
 
 </body>
